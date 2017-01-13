@@ -96,7 +96,7 @@ settings =
 		["plugin.device"] =
 		{
 			-- required
-			publisherId = "REVERSE_PUBLISHER_URL",
+			publisherId = "com.pelagic-games",
 		},
 	},		
 }
@@ -122,7 +122,7 @@ You can access sample code [here](sample.lua).
 
 ### Support
 
-More support is available from the PUBLISHER_NAME team:
+More support is available from the Pelagic Games team:
 
 * [E-mail](mailto://support@pelagic-games.com)
 * [Plugin Publisher](http://www.pelagic-games.com)
