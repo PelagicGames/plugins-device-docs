@@ -11,7 +11,7 @@
 
 The device plugin can be used in your [Corona](https://coronalabs.com/products/corona-sdk/) project. It enables you to easily get information about the device running the application in one place, including what events are supported.
 
-With access to xdpi and ydpi information for the device it is also possible to create an application running with a stretched display without stretching display objects (see [xdpi](xdpi.markdown)/[ydpi](ydpi.markdown) for more information).
+With access to xdpi and ydpi information for the device it is also possible to create an application with fixed real size display objects (i.e. the same size on multiple device screens), or to run the application with a stretched display without stretching display objects (see [xdpi](xdpi.markdown)/[ydpi](ydpi.markdown) for more information).
 
 
 ## Syntax
