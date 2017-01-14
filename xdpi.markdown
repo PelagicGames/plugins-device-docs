@@ -12,6 +12,8 @@
 
 This property is the dpi (dots per inch) resolution of the device running the application, along the x-axis.
 
+This property can be used with [ydpi](ydpi.markdown) to have display objects appear as the same size, regardless of device being used to run the application (e.g. to create a ruler app), and to avoid stretching display objects with a stretched application display (see examples below).
+
 
 ## Example
  
@@ -19,4 +21,23 @@ This property is the dpi (dots per inch) resolution of the device running the ap
 local device = require 'plugin.device'
 
 print( device.xdpi )
+``````
+
+To have display objects appear as the same size, regardless of device:
+``````lua
+local device = require 'plugin.device'
+
+-- Create a rectangle 0.4 inches wide by 0.6 inches tall
+local rect = display.newRect(0, 0, 0.4 * device.xdpi * (display.contentWidth / display.pixelWidth), 0.6 * device.ydpi * (display.contentHeight / display.pixelHeight))
+``````
+
+To avoid stretching display objects, when the application runs with a stretched display:
+``````lua
+local device = require 'plugin.device'
+
+-- Create a rectangle with a width to height ratio of 2:3
+local rectWidth = 200
+local rectHeight = rectWidth * (3 / 2) * (device.ydpi / device.xdpi) * ((display.contentHeight / display.pixelHeight) / (display.contentWidth / display.pixelWidth))
+
+local rect = display.newRect(0, 0, rectWidth, rectHeight)
 ``````
